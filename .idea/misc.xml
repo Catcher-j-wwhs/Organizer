@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/4057711.EAD/AndroidStudioProjects/Organizer2/app/src/main/res/layout/add_blueprint.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/4057711.EAD/AndroidStudioProjects/Organizer2/app/src/main/res/layout/add_blueprint.xml" value="0.33" />
         <entry key="..\:/Users/4057711.EAD/AndroidStudioProjects/Organizer2/app/src/main/res/layout/add_part.xml" value="0.3307291666666667" />
         <entry key="..\:/Users/4057711.EAD/AndroidStudioProjects/Organizer2/app/src/main/res/layout/add_storage_unit.xml" value="0.3302083333333333" />
+        <entry key="..\:/Users/4057711.EAD/AndroidStudioProjects/Organizer2/app/src/main/res/layout/blueprint_item_view.xml" value="0.5" />
+        <entry key="..\:/Users/4057711.EAD/AndroidStudioProjects/Organizer2/app/src/main/res/layout/blueprint_view.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/4057711.EAD/AndroidStudioProjects/Organizer2/app/src/main/res/layout/login.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/4057711.EAD/AndroidStudioProjects/Organizer2/app/src/main/res/layout/main_screen.xml" value="0.33" />
         <entry key="..\:/Users/4057711.EAD/AndroidStudioProjects/Organizer2/app/src/main/res/layout/part_search.xml" value="0.3302083333333333" />

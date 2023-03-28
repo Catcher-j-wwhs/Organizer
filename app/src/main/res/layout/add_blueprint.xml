@@ -8,6 +8,65 @@
         android:id="@+id/add_blueprintBackBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
         android:text="Back" />
-    
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="322dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter Width in meters"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/edit1"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="234dp"
+        android:layout_marginTop="305dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter Length in meters"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/add_blueprintDoneBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="466dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="21dp"
+        android:text="DOne" />
+
+    <EditText
+        android:id="@+id/BluePrintName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/edit1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="467dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter Name"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Make Blueprint"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
+        ></TextView>
+
+
 </RelativeLayout>
