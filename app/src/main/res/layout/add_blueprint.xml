@@ -13,7 +13,7 @@
         android:text="Back" />
 
     <EditText
-        android:id="@+id/edit1"
+        android:id="@+id/Width"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -24,7 +24,7 @@
         android:padding="10dp" />
 
     <EditText
-        android:id="@+id/edit2"
+        android:id="@+id/Length"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/edit1"
@@ -50,7 +50,7 @@
         android:id="@+id/BluePrintName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/edit1"
+        android:layout_alignStart="@+id/Width"
         android:layout_alignParentTop="true"
         android:layout_marginTop="467dp"
         android:layout_marginEnd="16dp"

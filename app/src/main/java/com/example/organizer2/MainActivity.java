@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText Length, Width,name;
     private ListView BlueprintListView;
 
-    public Context context = getApplicationContext();
+    public Context context ;
     public Matrix matrix = new Matrix();
 
 
@@ -38,14 +38,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        context = getApplicationContext();
+
         setContentView(R.layout.main_screen);
-        XmlPullParser parser = context.getResources().getXml(getTaskId());
-        AttributeSet attributes = Xml.asAttributeSet(parser);
 
 
-        Length = findViewById(R.id.edit1);
-        Width = findViewById(R.id.edit2);
-        name = findViewById(R.id.BluePrintName);
+
         BlueprintListView = findViewById(R.id.BlueprintList);
         BlueprintAdapter blueprintAdapter =  new BlueprintAdapter(context,R.id.BlueprintList,R.id.Blueprint_item_view,blueprintList);
         BlueprintListView.setAdapter(blueprintAdapter);
@@ -88,10 +86,9 @@ public class MainActivity extends AppCompatActivity {
 
         if (Add_blueprint.BlueprintisDone)
         {
-            blueprintList.add(new Blueprint(context,attributes,Length.getText(),Width.getText(),name.getText(),matrix));
+            blueprintList.add(new Blueprint(context,Length.getText(),Width.getText(),name.getText(),matrix));
             Add_blueprint.BlueprintisDone = false;
-        }
 
-    
+        }
     }
 }

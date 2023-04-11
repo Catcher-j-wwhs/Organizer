@@ -24,6 +24,7 @@ public class BlueprintAdapter extends ArrayAdapter<Blueprint> {
     public BlueprintAdapter(@NonNull Context context, int resource, int textViewResourceId, @NonNull List<Blueprint> objects) {
         super(context, resource, textViewResourceId, objects);
         blist = objects;
+        bContext = context;
     }
 
 
@@ -36,9 +37,6 @@ public class BlueprintAdapter extends ArrayAdapter<Blueprint> {
             listItem = LayoutInflater.from(bContext).inflate(R.layout.blueprint_item_view,parent,false);
 
         Blueprint currentBlueprint = blist.get(position);
-
-        ImageView image = listItem.findViewById(R.id.blueprint_image_view);
-        image.setImageDrawable(currentBlueprint.getDrawable());
 
         TextView name =  listItem.findViewById(R.id.name_text_view);
         name.setText(currentBlueprint.getName());

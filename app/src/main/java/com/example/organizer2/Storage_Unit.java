@@ -4,11 +4,11 @@ public class Storage_Unit {
     double Size_x;
     double Size_y;
     double Size_z;
-    double X_coordinate;
-    double Y_coordinate;
+    int X_coordinate;
+    int Y_coordinate;
     int Numb_of_drawers;
 
-    public Storage_Unit(double size_x, double size_y, double size_z, int numb_of_drawers, double Xcoordinate, double Ycoordinate  )
+    public Storage_Unit(double size_x, double size_y, double size_z, int numb_of_drawers, int Xcoordinate, int Ycoordinate  )
     {
         this.Size_x = size_x;
         this.Size_y = size_y;

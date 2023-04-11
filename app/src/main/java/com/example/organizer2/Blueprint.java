@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import androidx.annotation.RequiresApi;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Blueprint extends androidx.appcompat.widget.AppCompatImageView
@@ -27,6 +28,9 @@ public class Blueprint extends androidx.appcompat.widget.AppCompatImageView
     {
 
         Matrix matrix = new Matrix();
+        Boolean[][] hasstuff_or_no ;
+        ArrayList<Storage_Unit> Storage = new ArrayList<>();
+
         private Drawable blueprintImg = Drawable.createFromPath("blueprint_square");
         private Drawable blueprint = null;
 
@@ -74,18 +78,18 @@ public class Blueprint extends androidx.appcompat.widget.AppCompatImageView
 
         ScaleGestureDetector mScaleDetector;
 
-        Context context;
 
 
 
-        public Blueprint(Context context, AttributeSet attr   , Editable SizeX, Editable SizeY, Editable name, Matrix matrix)
+
+        public Blueprint(Context context, Editable SizeX, Editable SizeY, Editable name, Matrix matrix)
         {
             super(context);
 
 
             super.setClickable(true);
 
-            this.context = context;
+            //this.context = context;
 
             mScaleDetector = new ScaleGestureDetector(context, new ScaleListener(this));
 
@@ -96,6 +100,9 @@ public class Blueprint extends androidx.appcompat.widget.AppCompatImageView
             Length = Tempx;
             Height = Tempy;
             this.name = name.toString();
+
+
+
 
             m = new float[9];
 
@@ -408,9 +415,10 @@ public class Blueprint extends androidx.appcompat.widget.AppCompatImageView
 
             ArrayList<Rect> horizantal_lines  = new ArrayList<>();
             ArrayList<Rect> verticale_lines  = new ArrayList<>();
+            ArrayList<Rect> storage_spaces = new ArrayList<>();
 
             Rect blueprintbackground = new Rect();
-            blueprintbackground.set((int)width, (int) height, canvas.getWidth()/2, canvas.getHeight()/2);
+            blueprintbackground.set(0, canvas.getHeight()/2, canvas.getWidth(), canvas.getHeight());
 
             Paint blue = new Paint();
             blue.setColor(Color.BLUE);
@@ -420,17 +428,30 @@ public class Blueprint extends androidx.appcompat.widget.AppCompatImageView
             black.setStyle(Paint.Style.FILL);
 
             canvas.drawRect(blueprintbackground,black);
+
+            int blueprintlength = blueprintbackground.left - blueprintbackground.right;
+            int blueprintheight = blueprintbackground.top - blueprintbackground.bottom;
+
             for (int x = 0; x < height ; x++)
             {
-                horizantal_lines.add(new Rect(1,1,1,1));
-                horizantal_lines.get(x).inset(0,(int)height/2);
+                horizantal_lines.add(new Rect(blueprintbackground.left,
+                        (int)(blueprintheight/height)*x+blueprintbackground.top-1,
+                        blueprintbackground.right,
+                        (int)(blueprintheight/height)*x+blueprintbackground.top));
                 canvas.drawRect(horizantal_lines.get(x),black);
             }
             for (int x = 0; x < width ; x++)
             {
-                verticale_lines.add(new Rect(1,1,1,1));
-                verticale_lines.get(x).inset((int)width/2,1);
+                verticale_lines.add(new Rect((int)(blueprintlength/width)*x-1,
+                        blueprintbackground.top,
+                        (int)(blueprintlength/width)*x,
+                        blueprintbackground.bottom));
                 canvas.drawRect(verticale_lines.get(x),black);
+            }
+
+            for (int x = 0;x <Storage.size(); x++)
+            {
+                storage_spaces.add(new Rect())
             }
 
 
@@ -439,6 +460,16 @@ public class Blueprint extends androidx.appcompat.widget.AppCompatImageView
 
 
         }
+
+        public void addstorage_unit(Storage_Unit su)
+        {
+
+            Storage.add(su);
+            hasstuff_or_no[su.X_coordinate][su.Y_coordinate] = true;
+
+        }
+
+
 
     }
 
