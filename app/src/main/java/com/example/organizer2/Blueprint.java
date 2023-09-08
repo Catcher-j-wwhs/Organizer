@@ -451,7 +451,7 @@ public class Blueprint extends androidx.appcompat.widget.AppCompatImageView
 
             for (int x = 0;x <Storage.size(); x++)
             {
-                storage_spaces.add(new Rect())
+                storage_spaces.add(new Rect());
             }
 
 
